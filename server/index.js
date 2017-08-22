@@ -13,7 +13,7 @@ const user = require('./routes/user')
 const database = require('./routes/database')
 const company = require('./routes/company')
 const permission = require('./routes/permission')
-const page = require('./routes/pages')
+const page = require('./routes/page')
 
 const app = express();
 
