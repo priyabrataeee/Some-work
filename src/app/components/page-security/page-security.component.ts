@@ -5,6 +5,9 @@ import { User } from '../user/user';
 
 import { UserPermissionsComponent } from '../user-permissions/user-permissions.component';
 
+import { PageSearchComponent } from '../page-search/page-search.component';
+import { Page } from '../page/page';
+
 @Component({
   selector: 'app-page-security',
   templateUrl: './page-security.component.html',
@@ -13,9 +16,14 @@ import { UserPermissionsComponent } from '../user-permissions/user-permissions.c
 export class PageSecurityComponent implements OnInit {
 
   user: User;
+  page: Page;
 
   onSelectUser(user: User) {
     this.user = user;
+  }
+
+  onSelectPage(page: Page) {
+    this.page = page;
   }
   constructor() { }
 

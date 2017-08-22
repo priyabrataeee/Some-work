@@ -6,9 +6,9 @@
         </div>
     </div>
     <div class="form-group col-md-6">
-        <app-page-search></app-page-search>
-        <div *ngIf="company">
-            <h6>Selected Company: {{ company.company_name }}</h6>
+        <app-page-search (onSelectPage)="onSelectPage($event)"></app-page-search>
+        <div *ngIf="page">
+            <h6>Selected Page: {{ page.page_name }}</h6>
         </div>
     </div>
 </div>
