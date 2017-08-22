@@ -14,6 +14,6 @@ export class CompanySearchService {
   search(term: string): Observable<Company[]> {
     return this.http
                .get(`api/company/?name=%${term}%`)
-               .map(res => res.json() as Company[])
+               .map(res => res.json() as Company[]);
   }
 }

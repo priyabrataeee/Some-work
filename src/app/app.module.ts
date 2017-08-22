@@ -27,6 +27,7 @@ import { CompanyService } from './services/company.service';
 import { UserPermissionsComponent } from './components/user-permissions/user-permissions.component';
 import { PageSecurityComponent } from './components/page-security/page-security.component';
 import { PageSearchComponent } from './components/page-search/page-search.component';
+import { PageComponent } from './components/page/page.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { PageSearchComponent } from './components/page-search/page-search.compon
     CompanyDetailComponent,
     UserPermissionsComponent,
     PageSecurityComponent,
-    PageSearchComponent
+    PageSearchComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,

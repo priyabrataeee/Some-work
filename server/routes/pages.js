@@ -28,7 +28,7 @@ function getAll(req, res, next) {
 function getByName(req, res, next) {
     const query = {
         name: 'user-search',
-        text: 'SELECT * FROM companies WHERE company_name LIKE $1',
+        text: 'SELECT * FROM pages WHERE page_name LIKE $1',
         values: [req.query.name]
     }
     db.query(query, (err, data) => {
@@ -43,8 +43,8 @@ function getByName(req, res, next) {
 
 router.get('/:id', (req, res, next) => {
     const one = {
-        name: 'fetch-company',
-        text: 'SELECT * FROM companies WHERE id = $1',
+        name: 'fetch-pages',
+        text: 'SELECT * FROM pages WHERE id = $1',
         values: [req.params.id]
     }
     db.query(one, (err, data) => {
@@ -58,25 +58,25 @@ router.get('/:id', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
-    const newCompany = {
-        text: 'INSERT INTO companies (company_name, created_by) \
+    const newPage = {
+        text: 'INSERT INTO pages (page_name, created_by) \
      VALUES ($1, $2) RETURNING id',
         values: [
-            req.body.company_name,
+            req.body.page_name,
             req.body.created_by
         ]
     }
-    db.query(newCompany, (err, result, next) => {
+    db.query(newPage, (err, result, next) => {
         if (err) {
             res.statusCode = 500
             return res.json({
-                errors: ['Failed to create company']
+                errors: ['Failed to create page']
             })
         }
         // If success retrieve the inserted row and return it
         const one = {
-            name: 'fetch-company',
-            text: 'SELECT * FROM companies WHERE id = $1',
+            name: 'fetch-page',
+            text: 'SELECT * FROM pages WHERE id = $1',
             values: [result.rows[0].id]
         }
         db.query(one, (err, data) => {
@@ -92,11 +92,11 @@ router.post('/', (req, res, next) => {
 
 router.put('/:id', (req, res, next) => {
     const update = {
-        name: 'update-company',
-        text: 'UPDATE companies SET company_name = $1, updated_by = $2, \
+        name: 'update-page',
+        text: 'UPDATE pages SET page_name = $1, updated_by = $2, \
     updated_at=now() WHERE id = $3',
         values: [
-            req.body.company_name,
+            req.body.page_name,
             req.body.updated_by,
             req.params.id
         ]
@@ -106,7 +106,7 @@ router.put('/:id', (req, res, next) => {
         if (err) {
             res.statusCode = 500
             return res.json({
-                errors: ['Failed to update company']
+                errors: ['Failed to update page']
             })
         }
         res.statusCode = 201;
@@ -116,8 +116,8 @@ router.put('/:id', (req, res, next) => {
 
 router.delete('/:id', (req, res, next) => {
     const del = {
-        name: 'delete-company',
-        text: 'DELETE FROM companies WHERE id = $1',
+        name: 'delete-page',
+        text: 'DELETE FROM pages WHERE id = $1',
         values: [req.params.id]
     }
 
@@ -125,7 +125,7 @@ router.delete('/:id', (req, res, next) => {
         if (err) {
             res.statusCode = 500;
             return res.json({
-                errors: ['Failed to delete company']
+                errors: ['Failed to delete page']
             })
         }
         res.statusCode = 201;

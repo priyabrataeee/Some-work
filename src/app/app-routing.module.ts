@@ -19,6 +19,7 @@ import { DatabaseComponent } from './components/database/database.component';
 import { DatabaseDetailComponent } from './components/database-detail/database-detail.component';
 
 import { PageSecurityComponent } from './components/page-security/page-security.component';
+import { PageComponent } from './components/page/page.component';
 
 const routes: Routes = [
   { path: 'app-sso-auth-component', component: SSOAuthComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'database/:id', component: DatabaseDetailComponent },
   { path: 'database', component: DatabaseComponent },
   { path: 'pageSecurity', component: PageSecurityComponent },
+  { path: 'pages', component: PageComponent },
   { path: '**', redirectTo: 'app-sso-auth-component' }
 ];
 
