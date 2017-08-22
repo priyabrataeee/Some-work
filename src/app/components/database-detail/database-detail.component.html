@@ -1,0 +1,76 @@
+<div *ngIf="database">
+  <h5>{{ database.id }} {{database.connection_name}} ({{database.connection_type}}) Details</h5>
+
+  <div class="form-group row">
+    <label for="connection_name" class="col-2 col-form-label">Connection Name</label>
+    <div class="col-5">
+      <input [(ngModel)]="database.connection_name" placeholder="Connection Name" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="connection_type" class="col-2 col-form-label">Connection Type</label>
+    <div class="col-5">
+      <input [(ngModel)]="database.connection_type" placeholder="Connection Type" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="host" class="col-2 col-form-label">Host</label>
+    <div class="col-5">
+      <input [(ngModel)]="database.host" placeholder="Host" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="port" class="col-2 col-form-label">Port</label>
+    <div class="col-5">
+      <input [(ngModel)]="database.port" placeholder="Port" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="database_name" class="col-2 col-form-label">Database Name</label>
+    <div class="col-5">
+      <input [(ngModel)]="database.database_name" placeholder="Database Name" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="user_name" class="col-2 col-form-label">Username</label>
+    <div class="col-5">
+      <input [(ngModel)]="database.user_name" placeholder="Username" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="password" class="col-2 col-form-label">Password</label>
+    <div class="col-5">
+      <input [(ngModel)]="database.password" placeholder="Password" type="password" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="updated_by" class="col-2 col-form-label">Updated by</label>
+    <div class="col-5">
+      <input [(ngModel)]="database.updated_by" placeholder="Enter your EID" class="form-control">
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+  <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+  <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#deleteModal">Delete</button>
+
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirm Delete?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete?</p>
+          <p>There is no going back!!<p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="delete(database)">Yes!</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>

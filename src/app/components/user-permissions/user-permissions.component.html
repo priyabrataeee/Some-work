@@ -1,0 +1,17 @@
+<div *ngIf="user">
+  <table class="table table-hover table-sm">
+    <caption>{{ user.first_name }} {{ user.last_name }}</caption>
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Revoke Access</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of companies" (click)="deleteUserCompany(company)">
+        <td>{{ company.company_name }}</td>
+        <td class="text-center"><span (click)="deleteUserCompany(company)"  class="fa fa-window-close"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

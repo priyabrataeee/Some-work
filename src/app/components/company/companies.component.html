@@ -1,0 +1,32 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let company of companies" (click)="onSelect(company)"
+        [class.selected]="company === selectedCompany">
+      <td>{{ company.id }}</td>
+      <td>{{ company.company_name }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <h5>Add New Company</h5>
+  <div class="form-group row">
+    <label for="name" class="col-2 col-form-label">Name</label>
+    <div class="col-4">
+      <input [(ngModel)]="newCompany.company_name" placeholder="Enter Name" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="created_by" class="col-2 col-form-label">Created by</label>
+    <div class="col-4">
+      <input [(ngModel)]="newCompany.created_by" placeholder="Enter your EID" class="form-control">
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="add(newCompany)">Add Company</button>
+</div>

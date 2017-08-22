@@ -1,0 +1,7 @@
+  <label for="name-search-box" class="col-form-label">Company</label>
+  <input type="text" class="form-control" id="name-search-box" placeholder="Start Typing Company Name" #nameSearchBox
+  (keyup)="search(nameSearchBox.value)">
+  <div *ngFor = "let company of companies | async"
+        (click)="selectCompany(company)" class="name-search-result">
+    {{ company.company_name }}
+  </div>

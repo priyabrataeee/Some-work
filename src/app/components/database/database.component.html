@@ -1,0 +1,75 @@
+<h5>My Databases</h5>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Connection Name</th>
+      <th>Connection Type</th>
+      <th>Database</th>
+      <th>Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let database of databases" (click)="onSelect(database)"
+        [class.selected]="database === selectedDb">
+      <td>{{ database.id }}</td>
+      <td>{{ database.connection_name }}</td>
+      <td>{{ database.connection_type }}</td>
+      <td>{{ database.database_name }}</td>
+      <td>{{ database.created_by }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <h5>Add New Database</h5>
+  <div class="form-group row">
+    <label for="connection_name" class="col-2 col-form-label">Connection Name</label>
+    <div class="col-5">
+      <input [(ngModel)]="newDb.connection_name" placeholder="Connection Name" class="form-control">
+    </div>
+  </div>  
+  <div class="form-group row">
+    <label for="connection_type" class="col-2 col-form-label">Connection Type</label>
+    <div class="col-5">
+      <input [(ngModel)]="newDb.connection_type" placeholder="Connection Type" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="host" class="col-2 col-form-label">Host</label>
+    <div class="col-5">
+      <input [(ngModel)]="newDb.host" placeholder="Host" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="port" class="col-2 col-form-label">Port</label>
+    <div class="col-5">
+      <input [(ngModel)]="newDb.port" placeholder="Port" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="database" class="col-2 col-form-label">Database Name</label>
+    <div class="col-5">
+      <input [(ngModel)]="newDb.database_name" placeholder="Database" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="user_name" class="col-2 col-form-label">Username</label>
+    <div class="col-5">
+      <input [(ngModel)]="newDb.user_name" placeholder="Username" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="password" class="col-2 col-form-label">Password</label>
+    <div class="col-5">
+      <input [(ngModel)]="newDb.password" placeholder="Password" type="password" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="created_by" class="col-2 col-form-label">Created by</label>
+    <div class="col-5">
+      <input [(ngModel)]="newDb.created_by" placeholder="Enter your EID" class="form-control">
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="add(newDb)">Add Database</button>
+</div>  
