@@ -1,0 +1,31 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let page of pages" (click)="onSelect(page)" [class.selected]="page === selectedPage">
+            <td>{{ page.id }}</td>
+            <td>{{ page.page_name }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <h5>Add New Page</h5>
+    <div class="form-group row">
+        <label for="name" class="col-2 col-form-label">Name</label>
+        <div class="col-4">
+            <input [(ngModel)]="newPage.page_name" placeholder="Enter Name" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="created_by" class="col-2 col-form-label">Created by</label>
+        <div class="col-4">
+            <input [(ngModel)]="newPage.created_by" placeholder="Enter your EID" class="form-control">
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="add(newPage)">Add Page</button>
+</div>
