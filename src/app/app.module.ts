@@ -29,6 +29,7 @@ import { UserPermissionsComponent } from './components/user-permissions/user-per
 import { PageSecurityComponent } from './components/page-security/page-security.component';
 import { PageSearchComponent } from './components/page-search/page-search.component';
 import { PageComponent } from './components/page/page.component';
+import { PageDetailComponent } from './components/page-detail/page-detail.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { PageComponent } from './components/page/page.component';
     UserPermissionsComponent,
     PageSecurityComponent,
     PageSearchComponent,
-    PageComponent
+    PageComponent,
+    PageDetailComponent
   ],
   imports: [
     BrowserModule,
