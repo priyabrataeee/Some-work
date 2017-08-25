@@ -21,6 +21,7 @@ import { DatabaseDetailComponent } from './components/database-detail/database-d
 import { PageSecurityComponent } from './components/page-security/page-security.component';
 import { PageComponent } from './components/page/page.component';
 import { PageDetailComponent } from './components/page-detail/page-detail.component';
+import { DatabaseSecurityComponent } from './components/database-security/database-security.component';
 
 const routes: Routes = [
   { path: 'app-sso-auth-component', component: SSOAuthComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'company', component: CompaniesComponent },
   { path: 'database/:id', component: DatabaseDetailComponent },
   { path: 'database', component: DatabaseComponent },
+  { path: 'databaseSecurity', component: DatabaseSecurityComponent },
   { path: 'pageSecurity', component: PageSecurityComponent },
   { path: 'pages', component: PageComponent },
   { path: 'page/:id', component: PageDetailComponent},

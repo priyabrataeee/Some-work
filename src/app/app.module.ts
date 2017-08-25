@@ -30,6 +30,8 @@ import { PageSecurityComponent } from './components/page-security/page-security.
 import { PageSearchComponent } from './components/page-search/page-search.component';
 import { PageComponent } from './components/page/page.component';
 import { PageDetailComponent } from './components/page-detail/page-detail.component';
+import { DatabaseSecurityComponent } from './components/database-security/database-security.component';
+import { DatabaseSearchComponent } from './components/database-search/database-search.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { PageDetailComponent } from './components/page-detail/page-detail.compon
     PageSecurityComponent,
     PageSearchComponent,
     PageComponent,
-    PageDetailComponent
+    PageDetailComponent,
+    DatabaseSecurityComponent,
+    DatabaseSearchComponent
   ],
   imports: [
     BrowserModule,

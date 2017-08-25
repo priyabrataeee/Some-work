@@ -1,0 +1,5 @@
+<label for="name-search-box" class="col-form-label">Database</label>
+<input type="text" class="form-control" id="page-search-box" placeholder="Start Typing Page Name" #nameSearchBox (keyup)="search(nameSearchBox.value)">
+<div *ngFor="let page of pages | async" (click)="selectPage(page)" class="name-search-result">
+    {{ page.page_name }}
+</div>
