@@ -40,10 +40,10 @@ const routes: Routes = [
   { path: 'database', component: DatabaseComponent },
   { path: 'databaseSecurity', component: DatabaseSecurityComponent },
   { path: 'pageSecurity', component: PageSecurityComponent },
-  { path: 'pages', component: PageComponent },
+  { path: 'page', component: PageComponent },
   { path: 'page/:id', component: PageDetailComponent},
   { path: 'rowSecurity', component: RowSecurityComponent},
-  { path: 'rows', component: RowComponent},
+  { path: 'row', component: RowComponent},
   { path: 'row/:id', component: RowDetailComponent},
   { path: '**', redirectTo: 'app-sso-auth-component' }
 ];

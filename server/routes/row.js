@@ -58,7 +58,7 @@ router.get('/:id', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
-    const newPage = {
+    const newRow = {
         text: 'INSERT INTO row_security (row_name, created_by) \
      VALUES ($1, $2) RETURNING id',
         values: [
@@ -66,7 +66,7 @@ router.post('/', (req, res, next) => {
             req.body.created_by
         ]
     }
-    db.query(newPage, (err, result, next) => {
+    db.query(newRow, (err, result, next) => {
         if (err) {
             res.statusCode = 500
             return res.json({

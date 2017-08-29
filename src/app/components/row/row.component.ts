@@ -10,7 +10,7 @@ import { RowService } from '../../services/row.service';
   styleUrls: ['./row.component.css']
 })
 export class RowComponent implements OnInit {
-  row: Row[];
+  rows: Row[];
   selectedRow: Row;
   newRow: Row;
 
@@ -22,7 +22,7 @@ export class RowComponent implements OnInit {
   getRows(): void {
     this.rowService
         .getRows()
-        .then(row => this.row = row);
+        .then(rows => this.rows = rows);
   }
 
   ngOnInit() {
@@ -33,7 +33,7 @@ export class RowComponent implements OnInit {
   add(row: Row): void {
     this.rowService.create(row)
         .then(row => {
-          this.row.push(row);
+          this.rows.push(row);
           this.selectedRow = null;
         });
   }

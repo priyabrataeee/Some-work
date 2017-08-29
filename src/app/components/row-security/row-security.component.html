@@ -6,9 +6,9 @@
         </div>
     </div>
     <div class="form-group col-md-6">
-        <app-page-search (onSelectRow)="onSelectRow($event)"></app-page-search>
+        <app-row-search (onSelectRow)="onSelectRow($event)"></app-row-search>
         <div *ngIf="row">
-            <h6>Selected Page: {{ row.row_name }}</h6>
+            <h6>Selected Row: {{ row.row_name }}</h6>
         </div>
     </div>
 </div>

@@ -35,9 +35,9 @@ export class RowSearchComponent implements OnInit {
     this.searchTerms.next(term);
   }
 
-  selectPage(row) {
+  selectRow(row) {
     this.row = row;
-    this.onSelectRow.emit();
+    this.onSelectRow.emit(row);
   }
 
   ngOnInit(): void {

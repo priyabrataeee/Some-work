@@ -8,7 +8,7 @@
     <tbody>
         <tr *ngFor="let row of rows" (click)="onSelect(row)" [class.selected]="row === selectedRow">
             <td>{{ row.id }}</td>
-            <td>{{ row.page_name }}</td>
+            <td>{{ row.row_name }}</td>
         </tr>
     </tbody>
 </table>
