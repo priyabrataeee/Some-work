@@ -14,6 +14,7 @@ const database = require('./routes/database')
 const company = require('./routes/company')
 const permission = require('./routes/permission')
 const page = require('./routes/page')
+const row = require('./routes/row')
 
 const app = express();
 
@@ -31,7 +32,7 @@ app.use('/api/user', user)
 app.use('/api/company', company)
 app.use('/api/database', database)
 app.use('/api/permission', permission)
-app.use('/api/page', page)
+app.use('/api/row', row)
 app.use('/api', api)
 
 // Redirect other routes to Angular

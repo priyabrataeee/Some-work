@@ -16,14 +16,14 @@ import { Database } from '../database/database';
 export class DatabaseSecurityComponent implements OnInit {
 
   user: User;
-  db: Database;
+  database: Database;
 
   onSelectUser(user: User) {
     this.user = user;
   }
 
-  onSelectdb(db: Database) {
-    this.db = db;
+  onSelectDB(database: Database) {
+    this.database = database;
   }
   constructor() { }
 

@@ -1,15 +1,15 @@
-<div *ngIf="page">
-    <h5>{{ page.page_name }}</h5>
+<div *ngIf="row">
+    <h5>{{ row.row_name }}</h5>
     <div class="form-group row">
-        <label for="page_name" class="col-2 col-form-label">Page Name</label>
+        <label for="page_name" class="col-2 col-form-label">Row Name</label>
         <div class="col-4">
-            <input [(ngModel)]="page.page_name" placeholder="Enter Name" class="form-control">
+            <input [(ngModel)]="row.row_name" placeholder="Enter Name" class="form-control">
         </div>
     </div>
     <div class="form-group row">
         <label for="updated_by" class="col-2 col-form-label">Updated by</label>
         <div class="col-4">
-            <input [(ngModel)]="page.updated_by" placeholder="Enter your EID" class="form-control">
+            <input [(ngModel)]="row.updated_by" placeholder="Enter your EID" class="form-control">
         </div>
     </div>
     <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
@@ -22,8 +22,8 @@
                 <div class="modal-header">
                     <h5 class="modal-title">Confirm Delete?</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <span aria-hidden="true">&times;</span>
+        </button>
                 </div>
                 <div class="modal-body">
                     <p>Are you sure you want to delete?</p>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="delete(page)">Yes!</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="delete(row)">Yes!</button>
                 </div>
             </div>
         </div>

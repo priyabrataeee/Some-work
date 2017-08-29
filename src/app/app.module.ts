@@ -32,6 +32,11 @@ import { PageComponent } from './components/page/page.component';
 import { PageDetailComponent } from './components/page-detail/page-detail.component';
 import { DatabaseSecurityComponent } from './components/database-security/database-security.component';
 import { DatabaseSearchComponent } from './components/database-search/database-search.component';
+import { RowComponent } from './components/row/row.component';
+import { RowSecurityComponent } from './components/row-security/row-security.component';
+import { RowSearchComponent } from './components/row-search/row-search.component';
+import { RowDetailComponent } from './components/row-detail/row-detail.component';
+import { RowService} from './services/row.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +58,11 @@ import { DatabaseSearchComponent } from './components/database-search/database-s
     PageComponent,
     PageDetailComponent,
     DatabaseSecurityComponent,
-    DatabaseSearchComponent
+    DatabaseSearchComponent,
+    RowComponent,
+    RowSecurityComponent,
+    RowSearchComponent,
+    RowDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +76,8 @@ import { DatabaseSearchComponent } from './components/database-search/database-s
     DatabaseService,
     UserService,
     CompanyService,
-    PageService
+    PageService,
+    RowService
   ],
   bootstrap: [AppComponent]
 })

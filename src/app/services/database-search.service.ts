@@ -13,7 +13,7 @@ export class DatabaseSearchService {
 
     search(term: string): Observable<Database[]> {
       return this.http
-                  .get(`api/page/?name=%${term}%`)
+                  .get(`api/database/?name=%${term}%`)
                   .map(res => res.json() as Database[]);
     }
 

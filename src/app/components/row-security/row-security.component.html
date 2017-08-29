@@ -1,14 +1,14 @@
 <div class="row">
-    <div class="form-group col-md-3">
+    <div class="form-group col-md-6">
         <app-user-search (onSelectUser)="onSelectUser($event)"></app-user-search>
         <div *ngIf="user">
             <h6 class="">Selected User: {{ user.first_name }} {{ user.last_name }}</h6>
         </div>
     </div>
-    <div class="form-group col-md-3">
-        <app-database-search (onSelectDB)="onSelectDB($event)"></app-database-search>
-        <div *ngIf="database">
-            <h6>Selected Database: {{ database.database_name }}</h6>
+    <div class="form-group col-md-6">
+        <app-page-search (onSelectRow)="onSelectRow($event)"></app-page-search>
+        <div *ngIf="row">
+            <h6>Selected Page: {{ row.row_name }}</h6>
         </div>
     </div>
 </div>

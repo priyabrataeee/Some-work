@@ -23,6 +23,10 @@ import { PageComponent } from './components/page/page.component';
 import { PageDetailComponent } from './components/page-detail/page-detail.component';
 import { DatabaseSecurityComponent } from './components/database-security/database-security.component';
 
+import { RowSecurityComponent } from './components/row-security/row-security.component';
+import { RowComponent } from './components/row/row.component';
+import { RowDetailComponent } from './components/row-detail/row-detail.component';
+
 const routes: Routes = [
   { path: 'app-sso-auth-component', component: SSOAuthComponent },
   // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -38,6 +42,9 @@ const routes: Routes = [
   { path: 'pageSecurity', component: PageSecurityComponent },
   { path: 'pages', component: PageComponent },
   { path: 'page/:id', component: PageDetailComponent},
+  { path: 'rowSecurity', component: RowSecurityComponent},
+  { path: 'rows', component: RowComponent},
+  { path: 'row/:id', component: RowDetailComponent},
   { path: '**', redirectTo: 'app-sso-auth-component' }
 ];
 
