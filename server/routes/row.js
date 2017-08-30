@@ -62,7 +62,7 @@ router.post('/', (req, res, next) => {
         text: 'INSERT INTO row_security (row_name, created_by) \
      VALUES ($1, $2) RETURNING id',
         values: [
-            req.body.page_name,
+            req.body.row_name,
             req.body.created_by
         ]
     }
@@ -96,7 +96,7 @@ router.put('/:id', (req, res, next) => {
         text: 'UPDATE row_security SET row_name = $1, updated_by = $2, \
     updated_at=now() WHERE id = $3',
         values: [
-            req.body.page_name,
+            req.body.row_name,
             req.body.updated_by,
             req.params.id
         ]
