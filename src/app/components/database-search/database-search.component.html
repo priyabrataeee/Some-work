@@ -1,5 +1,5 @@
 <label for="name-search-box" class="col-form-label">Database</label>
-<input type="text" class="form-control" id="page-search-box" placeholder="Start Typing Page Name" #nameSearchBox (keyup)="search(nameSearchBox.value)">
+<input type="text" class="form-control" id="page-search-box" placeholder="Start Typing DB Name" #nameSearchBox (keyup)="search(nameSearchBox.value)">
 <div *ngFor="let database of databases | async" (click)="selectDB(database)" class="name-search-result">
     {{ database.database_name }}
 </div>

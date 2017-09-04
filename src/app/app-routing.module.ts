@@ -27,6 +27,8 @@ import { RowSecurityComponent } from './components/row-security/row-security.com
 import { RowComponent } from './components/row/row.component';
 import { RowDetailComponent } from './components/row-detail/row-detail.component';
 
+import { MonthendSnapComponent } from './components/monthend-snap/monthend-snap.component';
+
 const routes: Routes = [
   { path: 'app-sso-auth-component', component: SSOAuthComponent },
   // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -45,6 +47,7 @@ const routes: Routes = [
   { path: 'rowSecurity', component: RowSecurityComponent},
   { path: 'row', component: RowComponent},
   { path: 'row/:id', component: RowDetailComponent},
+  { path: 'monthendSnap', component: MonthendSnapComponent},
   { path: '**', redirectTo: 'app-sso-auth-component' }
 ];
 

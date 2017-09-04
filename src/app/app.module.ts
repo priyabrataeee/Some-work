@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -37,6 +37,8 @@ import { RowSecurityComponent } from './components/row-security/row-security.com
 import { RowSearchComponent } from './components/row-search/row-search.component';
 import { RowDetailComponent } from './components/row-detail/row-detail.component';
 import { RowService} from './services/row.service';
+import { MonthendSnapComponent } from './components/monthend-snap/monthend-snap.component';
+import { EmployeeEventsComponent } from './components/employee-events/employee-events.component';
 
 @NgModule({
   declarations: [
@@ -62,13 +64,16 @@ import { RowService} from './services/row.service';
     RowComponent,
     RowSecurityComponent,
     RowSearchComponent,
-    RowDetailComponent
+    RowDetailComponent,
+    MonthendSnapComponent,
+    EmployeeEventsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     SSOAuthService,
