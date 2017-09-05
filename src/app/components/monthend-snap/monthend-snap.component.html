@@ -1,8 +1,8 @@
 <form [formGroup]="mesnap" (ngSubmit)='onSubmit(mesnap.value)'>
     <div class="row">
-        <div class="col-md-12 form-control">
+        <div class="form-group myDate">
             <label>Date</label>
-            <input type="text" class="form-control col-md-4" fromControlName="onDate">
+            <my-date-picker class="form-control" [options]="myDatePickerOptions" formControlName="onDate"></my-date-picker>
         </div>
         <div class="col-md-4 form-group">
             <label>*Associate type:</label>
@@ -85,15 +85,15 @@
             </select>
         </div>
         <span class="clear"></span>
-        <div class="col-md-4 form-control">
+        <div class="col-md-4 form-group">
             <label>First Name</label>
             <input type="text" class="form-control" formControlName="fName">
         </div>
-        <div class="col-md-4 form-control">
+        <div class="col-md-4 form-group">
             <label>Last Name</label>
             <input type="text" class="form-control" formControlName="lName">
         </div>
-        <div class="col-md-4 form-control">
+        <div class="col-md-4 form-group">
             <label>Employee ID</label>
             <input type="text" class="form-control" formControlName="emp_id">
         </div>

@@ -28,6 +28,7 @@
     "express": "^4.15.3",
     "font-awesome": "^4.7.0",
     "morgan": "^1.8.2",
+    "mydatepicker": "^2.0.28",
     "ng2-cookies": "^1.0.12",
     "pg": "^7.0.2",
     "rxjs": "^5.4.1",

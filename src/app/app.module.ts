@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MyDatePickerModule } from 'mydatepicker';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -73,7 +74,8 @@ import { EmployeeEventsComponent } from './components/employee-events/employee-e
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MyDatePickerModule
   ],
   providers: [
     SSOAuthService,
