@@ -10,6 +10,10 @@ my-date-picker {
     border: none;
 }
 
+.col-md-6.pull-left {
+    padding: 0;
+}
+
 my-date-picker {
     padding: 0;
 }
