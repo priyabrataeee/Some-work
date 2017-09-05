@@ -28,6 +28,7 @@ import { RowComponent } from './components/row/row.component';
 import { RowDetailComponent } from './components/row-detail/row-detail.component';
 
 import { MonthendSnapComponent } from './components/monthend-snap/monthend-snap.component';
+import { EmployeeEventsComponent } from './components/employee-events/employee-events.component';
 
 const routes: Routes = [
   { path: 'app-sso-auth-component', component: SSOAuthComponent },
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'row', component: RowComponent},
   { path: 'row/:id', component: RowDetailComponent},
   { path: 'monthendSnap', component: MonthendSnapComponent},
+  { path: 'employeeEvents', component: EmployeeEventsComponent},
   { path: '**', redirectTo: 'app-sso-auth-component' }
 ];
 

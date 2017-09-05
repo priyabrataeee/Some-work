@@ -1,8 +1,25 @@
-<form [formGroup]="mesnap" (ngSubmit)='onSubmit(mesnap.value)'>
+<form [formGroup]="empevent" (ngSubmit)='onSubmit(empevent.value)'>
     <div class="row">
         <div class="form-control myDate">
-            <label>Date</label>
-            <my-date-picker class="form-control" [options]="myDatePickerOptions" formControlName="onDate" style="text-align:center;"></my-date-picker>
+            <div class="col-md-6 pull-left">
+                <label>Date &#60;&#61;</label>
+                <my-date-picker class="form-control" [options]="myDatePickerOptions" formControlName="onDate1" style="text-align:center;"></my-date-picker>
+            </div>
+            <div class="col-md-6 pull-left">
+                <label>and &#62;&#61;</label>
+                <my-date-picker class="form-control" [options]="myDatePickerOptions" formControlName="onDate2" style="text-align:center;"></my-date-picker>
+            </div>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4 form-group">
+            <label>Event Type:</label>
+            <p><input type="checkbox" formControlName="hire"> Hire</p>
+            <p><input type="checkbox" formControlName="job-grade_change"> Job/Grade Change</p>
+            <p><input type="checkbox" formControlName="loa"> Leave of Absence</p>
+            <p><input type="checkbox" formControlName="pay_rate_change"> Pay Rate Change</p>
+            <p><input type="checkbox" formControlName="profile_change"> Profile Change</p>
+            <p><input type="checkbox" formControlName="termination"> Termination</p>
+            <p><input type="checkbox" formControlName="transfer"> Transfer</p>
         </div>
         <div class="col-md-4 form-group">
             <label>*Associate type:</label>
@@ -271,6 +288,6 @@
             </select>
         </div>
         <span class="clear"></span>
-        <input type="submit" class="btn btn-primary" value="Submit Form" [disabled]="!mesnap.valid">
+        <input type="submit" class="btn btn-primary" value="Submit Form" [disabled]="!empevent.valid">
     </div>
 </form>

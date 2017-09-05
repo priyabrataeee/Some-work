@@ -10,11 +10,16 @@ import { Mesnap } from './monthend-snap';
 })
 export class MonthendSnapComponent implements OnInit {
   mesnap: FormGroup;
+  today = new Date();
+  dd = this.today.getDate() + 1;
+  mm = this.today.getMonth() + 1;
+  yyyy = this.today.getFullYear();
+  disableDate = {year: this.yyyy, month: this.mm, day: this.dd};
   private myDatePickerOptions: IMyDpOptions = {
       dateFormat: 'yyyy/mm',
+      indicateInvalidDate: true,
+      disableSince: this.disableDate
   };
-
-  private model: Object = { date: { year: 2017, month: 10} };
 
   constructor(private fb: FormBuilder) {
     this.mesnap = fb.group(Mesnap);
@@ -24,6 +29,8 @@ export class MonthendSnapComponent implements OnInit {
   }
 
   onSubmit(form: any): void {
+    const realDate = form['onDate'].formatted;
+    form['onDate'] = realDate;
     console.log('you submitted value:', form);
   }
 

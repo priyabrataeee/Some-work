@@ -2,7 +2,7 @@
     width: 100%;
     clear: both;
     display: block;
-    height: 0;
+    height: 20px;
 }
 
 div.form-control,
