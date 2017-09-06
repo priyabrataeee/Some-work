@@ -17,7 +17,9 @@ export class EmployeeEventsComponent implements OnInit {
 
   private myDatePickerOptions: IMyDpOptions = {
     dateFormat: 'mm/dd/yyyy',
-    indicateInvalidDate: true
+    indicateInvalidDate: true,
+    height: '30px',
+    selectionTxtFontSize: '12px'
   };
 
   private model: Object = { date: { year: 2017, month: 10} };

@@ -10,7 +10,7 @@ my-date-picker {
 }
 
 div.form-group {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 }
 
 .col-md-6.pull-left {
@@ -24,6 +24,7 @@ my-date-picker {
 .myDate {
     width: 100%;
     padding: 0 15px;
+    margin-top: -10px;
 }
 
 label,
@@ -49,4 +50,10 @@ input.ng-invalid {
 p {
     margin: 0 10px 0 0 !important;
     float: left;
+}
+
+input[type='submit'],
+input[type='reset'] {
+    margin-left: 15px;
+    max-height: none;
 }

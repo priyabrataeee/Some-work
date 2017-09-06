@@ -18,7 +18,9 @@ export class MonthendSnapComponent implements OnInit {
   private myDatePickerOptions: IMyDpOptions = {
       dateFormat: 'yyyy/mm',
       indicateInvalidDate: true,
-      disableSince: this.disableDate
+      disableSince: this.disableDate,
+      height: '30px',
+      selectionTxtFontSize: '12px'
   };
 
   constructor(private fb: FormBuilder) {

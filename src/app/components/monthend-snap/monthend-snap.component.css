@@ -17,6 +17,7 @@ my-date-picker {
 .myDate {
     width: 100%;
     padding: 0 15px;
+    margin-top: -20px;
 }
 
 label {
@@ -36,4 +37,10 @@ input {
 select.ng-invalid,
 input.ng-invalid {
     background-color: #F1DEDE;
+}
+
+input[type='submit'],
+input[type='reset'] {
+    margin-left: 15px;
+    max-height: none;
 }
