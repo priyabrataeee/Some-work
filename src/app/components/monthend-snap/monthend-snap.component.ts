@@ -29,8 +29,7 @@ export class MonthendSnapComponent implements OnInit {
   }
 
   onSubmit(form: any): void {
-    const realDate = form['onDate'].formatted;
-    form['onDate'] = realDate;
+    form['onDate'] = form['onDate'].formatted;
     console.log('you submitted value:', form);
   }
 
