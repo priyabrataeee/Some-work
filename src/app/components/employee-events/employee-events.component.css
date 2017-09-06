@@ -22,3 +22,22 @@ my-date-picker {
     width: 100%;
     padding: 0 15px;
 }
+
+label {
+    font-size: 12px;
+}
+
+select {
+    max-height: 30px;
+    padding: 2px;
+}
+
+input {
+    max-height: 35px;
+    padding: 3px 5px;
+}
+
+select.ng-invalid,
+input.ng-invalid {
+    background-color: #F1DEDE;
+}
