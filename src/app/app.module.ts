@@ -37,9 +37,10 @@ import { RowComponent } from './components/row/row.component';
 import { RowSecurityComponent } from './components/row-security/row-security.component';
 import { RowSearchComponent } from './components/row-search/row-search.component';
 import { RowDetailComponent } from './components/row-detail/row-detail.component';
-import { RowService} from './services/row.service';
+import { RowService } from './services/row.service';
 import { MonthendSnapComponent } from './components/monthend-snap/monthend-snap.component';
 import { EmployeeEventsComponent } from './components/employee-events/employee-events.component';
+import { MonthendSnapService } from './services/monthend-snap.service';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { EmployeeEventsComponent } from './components/employee-events/employee-e
     UserService,
     CompanyService,
     PageService,
-    RowService
+    RowService,
+    MonthendSnapService
   ],
   bootstrap: [AppComponent]
 })

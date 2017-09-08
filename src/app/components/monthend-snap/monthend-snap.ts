@@ -30,3 +30,7 @@ export let Mesnap  = {
     'org_lvl12': [null],
     'dept': [null]
   };
+
+  export class AssocType {
+    asseo_desc_type: string;
+  }

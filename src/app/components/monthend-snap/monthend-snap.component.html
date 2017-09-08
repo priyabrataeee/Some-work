@@ -7,11 +7,8 @@
         <div class="col-md-3 form-group">
             <label>*Associate type:</label>
             <select class="form-control" formControlName="associate_type">
-            <option class="first">at1</option>
-            <option>at2</option>
-            <option>at3</option>
-            <option>at4</option>
-            <option>at5</option>
+            <option></option>
+            <option *ngFor="let assoc_tp of assocType">{{ assoc_tp.asseo_desc_type }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
