@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
-import { AssocType } from '../components/monthend-snap/monthend-snap';
+import { AssocType, FlsaStatus } from '../components/monthend-snap/monthend-snap';
 
 @Injectable()
 export class MonthendSnapService {
@@ -16,6 +16,12 @@ export class MonthendSnapService {
     return this.http.get(this.pageUrl)
       .toPromise()
       .then(res => res.json() as AssocType[])
+      .catch(this.handleError);
+  }
+  getFlsaStatus(): Promise<FlsaStatus[]> {
+    return this.http.get(this.pageUrl)
+      .toPromise()
+      .then(res => res.json() as FlsaStatus[])
       .catch(this.handleError);
   }
 

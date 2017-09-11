@@ -8,17 +8,14 @@
             <label>*Associate type:</label>
             <select class="form-control" formControlName="associate_type">
             <option></option>
-            <option *ngFor="let assoc_tp of assocType">{{ assoc_tp.asseo_desc_type }}</option>
+            <option *ngFor="let assoc_tp of assocType">{{ assoc_tp.assoc_type_desc }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>FLSA Status</label>
             <select class="form-control" formControlName="flsa">
-            <option>fs1</option>
-            <option>fs2</option>
-            <option>fs3</option>
-            <option>fs4</option>
-            <option>fs5</option>
+            <option></option>
+            <option *ngFor="let flsa of flsaStatus">{{ flsa.flsa_stat_desc }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">

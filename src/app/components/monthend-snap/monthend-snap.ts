@@ -32,5 +32,9 @@ export let Mesnap  = {
   };
 
   export class AssocType {
-    asseo_desc_type: string;
+    assoc_type_desc: string;
+  }
+
+  export class FlsaStatus {
+    flsa_stat_desc: string;
   }
