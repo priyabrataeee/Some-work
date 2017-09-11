@@ -42,11 +42,11 @@ export class MonthendSnapComponent implements OnInit {
         .then(assocType => this.assocType = assocType);
   }
 
-  getFlsaStatus(): void {
-    this.monthendSnapService
-        .getFlsaStatus()
-        .then(flsaStatus => this.flsaStatus = flsaStatus);
-  }
+  // getFlsaStatus(): void {
+  //   this.monthendSnapService
+  //       .getFlsaStatus()
+  //       .then(flsaStatus => this.flsaStatus = flsaStatus);
+  // }
 
   onSubmit(form: any): void {
     form['onDate'] = form['onDate'].formatted;
@@ -62,7 +62,7 @@ export class MonthendSnapComponent implements OnInit {
 
   ngOnInit() {
     this.getAssocType();
-    this.getFlsaStatus();
+    // this.getFlsaStatus();
   }
 
 }

@@ -15,7 +15,7 @@
             <label>FLSA Status</label>
             <select class="form-control" formControlName="flsa">
             <option></option>
-            <option *ngFor="let flsa of flsaStatus">{{ flsa.flsa_stat_desc }}</option>
+            <option *ngFor="let assoc_tps of assocType">{{ assoc_tps.flsa_stat_desc }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">

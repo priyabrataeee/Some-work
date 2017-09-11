@@ -18,12 +18,12 @@ export class MonthendSnapService {
       .then(res => res.json() as AssocType[])
       .catch(this.handleError);
   }
-  getFlsaStatus(): Promise<FlsaStatus[]> {
-    return this.http.get(this.pageUrl)
-      .toPromise()
-      .then(res => res.json() as FlsaStatus[])
-      .catch(this.handleError);
-  }
+  // getFlsaStatus(): Promise<FlsaStatus[]> {
+  //   return this.http.get(this.pageUrl)
+  //     .toPromise()
+  //     .then(res => res.json() as FlsaStatus[])
+  //     .catch(this.handleError);
+  // }
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
