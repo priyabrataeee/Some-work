@@ -56,4 +56,8 @@ export let Mesnap  = {
     finc_lvl_12_desc: string;
     dept_nm: string;
     dept_id: number;
+    ec1_nm: string;
+    ec2_nm: string;
+    ec3_nm: string;
+    ec4_nm: string;
   }

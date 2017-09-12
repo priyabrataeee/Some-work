@@ -97,28 +97,28 @@
             <label>Reports To 1</label>
             <select class="form-control" formControlName="reports_to_1">
                 <option></option>
-                <option></option>
+                <option *ngFor="let reportTo1 of assocType.reportTo1">{{ reportTo1.ec1_nm }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>Reports To 2</label>
             <select class="form-control" formControlName="reports_to_2">
                 <option></option>
-                <option></option>
+                <option *ngFor="let reportTo2 of assocType.reportTo2">{{ reportTo2.ec2_nm }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>Reports To 3</label>
             <select class="form-control" formControlName="reports_to_3">
                 <option></option>
-                <option></option>
+                <option *ngFor="let reportTo3 of assocType.reportTo3">{{ reportTo3.ec3_nm }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>Reports To 4</label>
             <select class="form-control" formControlName="reports_to_4">
                 <option></option>
-                <option></option>
+                <option *ngFor="let reportTo4 of assocType.reportTo4">{{ reportTo4.ec4_nm }}</option>
             </select>
         </div>
         <span class="clear"></span>

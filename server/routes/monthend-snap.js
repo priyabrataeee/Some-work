@@ -283,6 +283,58 @@ function getOrgLvl12(req, res, next) {
     })
 }
 
+function getReportTo1(req, res, next) {
+    const reportTo1 = 'select distinct ec1_nm from phrdw_tb.Rpts_To_Dim'
+    db.query(reportTo1, (err, data) => {
+        if (err) {
+            return next(err)
+        }
+        res.statuscode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        compData.reportTo1 = data.rows;
+        next();
+    })
+}
+
+function getReportTo2(req, res, next) {
+    const reportTo2 = 'select distinct ec2_nm from phrdw_tb.Rpts_To_Dim'
+    db.query(reportTo2, (err, data) => {
+        if (err) {
+            return next(err)
+        }
+        res.statuscode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        compData.reportTo2 = data.rows;
+        next();
+    })
+}
+
+function getReportTo3(req, res, next) {
+    const reportTo3 = 'select distinct ec3_nm from phrdw_tb.Rpts_To_Dim'
+    db.query(reportTo3, (err, data) => {
+        if (err) {
+            return next(err)
+        }
+        res.statuscode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        compData.reportTo3 = data.rows;
+        next();
+    })
+}
+
+function getReportTo4(req, res, next) {
+    const reportTo4 = 'select distinct ec4_nm from phrdw_tb.Rpts_To_Dim'
+    db.query(reportTo4, (err, data) => {
+        if (err) {
+            return next(err)
+        }
+        res.statuscode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        compData.reportTo4 = data.rows;
+        next();
+    })
+}
+
 function getAllData(req, res) {
 
     res.send({
@@ -306,11 +358,15 @@ function getAllData(req, res) {
         orgLvl10: compData.orgLvl10,
         orgLvl11: compData.orgLvl11,
         orgLvl12: compData.orgLvl12,
-        deptAll: compData.deptAll
+        deptAll: compData.deptAll,
+        reportTo1: compData.reportTo1,
+        reportTo2: compData.reportTo2,
+        reportTo3: compData.reportTo3,
+        reportTo4: compData.reportTo4
     });
 }
 
 
-router.get('/', getDept, getAssociateType, getFlsaStatus, getJobLevel, getEmpStatus, getCountry, getState, getCity, getBuilding, getOrgLvl1, getOrgLvl2, getOrgLvl3, getOrgLvl4, getOrgLvl5, getOrgLvl6, getOrgLvl7, getOrgLvl8, getOrgLvl9, getOrgLvl10, getOrgLvl11, getOrgLvl12, getAllData);
+router.get('/', getDept, getAssociateType, getFlsaStatus, getJobLevel, getEmpStatus, getCountry, getState, getCity, getBuilding, getOrgLvl1, getOrgLvl2, getOrgLvl3, getOrgLvl4, getOrgLvl5, getOrgLvl6, getOrgLvl7, getOrgLvl8, getOrgLvl9, getOrgLvl10, getOrgLvl11, getOrgLvl12, getReportTo1, getReportTo2, getReportTo3, getReportTo4, getAllData);
 
 module.exports = router;
