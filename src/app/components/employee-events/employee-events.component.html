@@ -41,7 +41,7 @@
             <label>Job Level</label>
             <select class="form-control" formControlName="job_lvl">
                 <option></option>
-                <option *ngFor="let jobLvls of assocType.jobLvl">{{ jobLvls.job_lvl_desc }} ( {{ jobLvls.job_lvl_cd }} )</option>
+                <option *ngFor="let jobLvls of assocType.jobLvl | orderBy:'job_lvl_desc'">{{ jobLvls.job_lvl_desc }} ( {{ jobLvls.job_lvl_cd }} )</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
@@ -56,27 +56,27 @@
             <label>Country</label>
             <select class="form-control" formControlName="country">
                 <option></option>
-                <option *ngFor="let country of assocType.countryNM">{{ country.work_cntry_nm }}</option>
+                <option *ngFor="let country of assocType.countryNM | orderBy:'work_cntry_nm'">{{ country.work_cntry_nm }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>State</label>
             <select class="form-control" formControlName="state">
-                <option *ngFor="let states of assocType.stateNM">{{ states.work_st_cd }}</option>
+                <option *ngFor="let states of assocType.stateNM | orderBy:'work_st_cd'">{{ states.work_st_cd }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>City</label>
             <select class="form-control" formControlName="city">
                 <option></option>
-                <option *ngFor="let cities of assocType.cityNM">{{ cities.work_city_nm }}</option>
+                <option *ngFor="let cities of assocType.cityNM | orderBy:'work_city_nm'">{{ cities.work_city_nm }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>Building</label>
             <select class="form-control" formControlName="building">
                 <option></option>
-                <option *ngFor="let buildings of assocType.buildingAll">{{ buildings.loc_nm }} ( {{ buildings.loc_cd }} )</option>
+                <option *ngFor="let buildings of assocType.buildingAll | orderBy:'loc_nm'">{{ buildings.loc_nm }} ( {{ buildings.loc_cd }} )</option>
             </select>
         </div>
         <span class="clear"></span>
@@ -97,28 +97,28 @@
             <label>Reports To 1</label>
             <select class="form-control" formControlName="reports_to_1">
                 <option></option>
-                <option *ngFor="let reportTo1 of assocType.reportTo1">{{ reportTo1.ec1_nm }}</option>
+                <option *ngFor="let reportTo1 of restOfForm.reportTo1 | orderBy:'ec1_nm'">{{ reportTo1.ec1_nm }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>Reports To 2</label>
             <select class="form-control" formControlName="reports_to_2">
                 <option></option>
-                <option *ngFor="let reportTo2 of assocType.reportTo2">{{ reportTo2.ec2_nm }}</option>
+                <option *ngFor="let reportTo2 of restOfForm.reportTo2 | orderBy:'ec2_nm'">{{ reportTo2.ec2_nm }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>Reports To 3</label>
             <select class="form-control" formControlName="reports_to_3">
                 <option></option>
-                <option *ngFor="let reportTo3 of assocType.reportTo3">{{ reportTo3.ec3_nm }}</option>
+                <option *ngFor="let reportTo3 of restOfForm.reportTo3 | orderBy:'ec3_nm'">{{ reportTo3.ec3_nm }}</option>
             </select>
         </div>
         <div class="col-md-3 form-group">
             <label>Reports To 4</label>
             <select class="form-control" formControlName="reports_to_4">
                 <option></option>
-                <option *ngFor="let reportTo4 of assocType.reportTo4">{{ reportTo4.ec4_nm }}</option>
+                <option *ngFor="let reportTo4 of restOfForm.reportTo4 | orderBy:'ec4_nm'">{{ reportTo4.ec4_nm }}</option>
             </select>
         </div>
         <span class="clear"></span>
@@ -126,84 +126,84 @@
             <label>Org Level 1</label>
             <select class="form-control" formControlName="org_lvl1">
                 <option></option>
-                <option *ngFor="let orgLvl1 of assocType.orgLvl1">{{ orgLvl1.finc_lvl_1_desc }}</option>
+                <option *ngFor="let orgLvl1 of assocType.orgLvl1 | orderBy:'finc_lvl_1_desc'">{{ orgLvl1.finc_lvl_1_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 2</label>
             <select class="form-control" formControlName="org_lvl2">
                 <option></option>
-                <option *ngFor="let orgLvl2 of assocType.orgLvl2">{{ orgLvl2.finc_lvl_2_desc }}</option>
+                <option *ngFor="let orgLvl2 of assocType.orgLvl2 | orderBy:'finc_lvl_2_desc'">{{ orgLvl2.finc_lvl_2_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 3</label>
             <select class="form-control" formControlName="org_lvl3">
                 <option></option>
-                <option *ngFor="let orgLvl3 of assocType.orgLvl3">{{ orgLvl3.finc_lvl_3_desc }}</option>
+                <option *ngFor="let orgLvl3 of assocType.orgLvl3 | orderBy:'finc_lvl_3_desc'">{{ orgLvl3.finc_lvl_3_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 4</label>
             <select class="form-control" formControlName="org_lvl4">
                 <option></option>
-                <option *ngFor="let orgLvl4 of assocType.orgLvl4">{{ orgLvl4.finc_lvl_4_desc }}</option>
+                <option *ngFor="let orgLvl4 of assocType.orgLvl4 | orderBy:'finc_lvl_4_desc'">{{ orgLvl4.finc_lvl_4_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 5</label>
             <select class="form-control" formControlName="org_lvl5">
                 <option></option>
-                <option *ngFor="let orgLvl5 of assocType.orgLvl5">{{ orgLvl5.finc_lvl_5_desc }}</option>
+                <option *ngFor="let orgLvl5 of assocType.orgLvl5 | orderBy:'finc_lvl_5_desc'">{{ orgLvl5.finc_lvl_5_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 6</label>
             <select class="form-control" formControlName="org_lvl6">
                 <option></option>
-                <option *ngFor="let orgLvl6 of assocType.orgLvl6">{{ orgLvl6.finc_lvl_6_desc }}</option>
+                <option *ngFor="let orgLvl6 of assocType.orgLvl6 | orderBy:'finc_lvl_6_desc'">{{ orgLvl6.finc_lvl_6_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 7</label>
             <select class="form-control" formControlName="org_lvl7">
                 <option></option>
-                <option *ngFor="let orgLvl7 of assocType.orgLvl7">{{ orgLvl7.finc_lvl_7_desc }}</option>
+                <option *ngFor="let orgLvl7 of assocType.orgLvl7 | orderBy:'finc_lvl_7_desc'">{{ orgLvl7.finc_lvl_7_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 8</label>
             <select class="form-control" formControlName="org_lvl8">
                 <option></option>
-                <option *ngFor="let orgLvl8 of assocType.orgLvl8">{{ orgLvl8.finc_lvl_8_desc }}</option>
+                <option *ngFor="let orgLvl8 of assocType.orgLvl8 | orderBy:'finc_lvl_8_desc'">{{ orgLvl8.finc_lvl_8_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 9</label>
             <select class="form-control" formControlName="org_lvl9">
                 <option></option>
-                <option *ngFor="let orgLvl9 of assocType.orgLvl9">{{ orgLvl9.finc_lvl_9_desc }}</option>
+                <option *ngFor="let orgLvl9 of assocType.orgLvl9 | orderBy:'finc_lvl_9_desc'">{{ orgLvl9.finc_lvl_9_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 10</label>
             <select class="form-control" formControlName="org_lvl10">
                 <option></option>
-                <option *ngFor="let orgLvl10 of assocType.orgLvl10">{{ orgLvl10.finc_lvl_10_desc }}</option>
+                <option *ngFor="let orgLvl10 of assocType.orgLvl10 | orderBy:'finc_lvl_10_desc'">{{ orgLvl10.finc_lvl_10_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 11</label>
             <select class="form-control" formControlName="org_lvl11">
                 <option></option>
-                <option *ngFor="let orgLvl11 of assocType.orgLvl11">{{ orgLvl11.finc_lvl_11_desc }}</option>
+                <option *ngFor="let orgLvl11 of assocType.orgLvl11 | orderBy:'finc_lvl_11_desc'">{{ orgLvl11.finc_lvl_11_desc }}</option>
             </select>
         </div>
         <div class="col-md-2 form-group">
             <label>Org Level 12</label>
             <select class="form-control" formControlName="org_lvl12">
                 <option></option>
-                <option *ngFor="let orgLvl12 of assocType.orgLvl12">{{ orgLvl12.finc_lvl_12_desc }}</option>
+                <option *ngFor="let orgLvl12 of assocType.orgLvl12 | orderBy:'finc_lvl_12_desc'">{{ orgLvl12.finc_lvl_12_desc }}</option>
             </select>
         </div>
         <span class="clear"></span>
@@ -211,7 +211,7 @@
             <label>Department</label>
             <select class="form-control" formControlName="dept">
                 <option></option>
-                <option *ngFor="let dept of assocType.deptAll">{{ dept.dept_nm }} ( {{ dept.dept_id }} )</option>
+                <option *ngFor="let dept of restOfForm.deptAll | orderBy:'dept_nm'">{{ dept.dept_nm }} ( {{ dept.dept_id }} )</option>
             </select>
         </div>
         <span class="clear"></span>

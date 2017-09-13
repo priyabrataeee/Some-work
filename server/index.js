@@ -16,6 +16,7 @@ const permission = require('./routes/permission')
 const page = require('./routes/page')
 const row = require('./routes/row')
 const monthend_snap = require('./routes/monthend-snap')
+const emp_event = require('./routes/emp-event')
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use('/api/database', database)
 app.use('/api/permission', permission)
 app.use('/api/row', row)
 app.use('/api/monthend-snap', monthend_snap)
+app.use('/api/emp-event', emp_event)
 app.use('/api', api)
 
 // Redirect other routes to Angular

@@ -62,6 +62,9 @@ export let Empevent  = {
     finc_lvl_10_desc: string;
     finc_lvl_11_desc: string;
     finc_lvl_12_desc: string;
+  }
+
+  export class RestOfForm {
     dept_nm: string;
     dept_id: number;
     ec1_nm: string;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IMyDpOptions } from 'mydatepicker';
-import { Empevent, AssocType } from './employee-event';
+import { Empevent, AssocType, RestOfForm } from './employee-event';
 import { MonthendSnapService } from '../../services/monthend-snap.service';
 import { Router } from '@angular/router';
 
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class EmployeeEventsComponent implements OnInit {
   assocType: AssocType[];
+  restOfForm: RestOfForm[];
 
   empevent: FormGroup;
   constructor(
@@ -38,6 +39,12 @@ export class EmployeeEventsComponent implements OnInit {
         .then(assocType => this.assocType = assocType);
   }
 
+  getRestOfData(): void {
+    this.monthendSnapService
+    .getOtherFormData()
+    .then(restOfForm => this.restOfForm = restOfForm);
+  }
+
   onSubmit(form: any): void {
     const realDate1 = form['onDate1'].formatted;
     const realDate2 = form['onDate2'].formatted;
@@ -48,6 +55,9 @@ export class EmployeeEventsComponent implements OnInit {
 
   ngOnInit() {
     this.getAssocType();
+    this.getRestOfData();
+    console.log(this.restOfForm);
+    console.log(this.assocType);
   }
 
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyDatePickerModule } from 'mydatepicker';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -76,7 +77,8 @@ import { MonthendSnapService } from './services/monthend-snap.service';
     HttpModule,
     AppRoutingModule,
     FormsModule,
-    MyDatePickerModule
+    MyDatePickerModule,
+    Ng2OrderModule
   ],
   providers: [
     SSOAuthService,

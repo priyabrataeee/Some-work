@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IMyDpOptions } from 'mydatepicker';
-import { Mesnap, AssocType } from './monthend-snap';
+import { Mesnap, AssocType, RestOfForm } from './monthend-snap';
 import { MonthendSnapService } from '../../services/monthend-snap.service';
 import { Router } from '@angular/router';
 
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class MonthendSnapComponent implements OnInit {
   assocType: AssocType[];
+  restOfForm: RestOfForm[];
 
   mesnap: FormGroup;
   today = new Date();
@@ -41,6 +42,12 @@ export class MonthendSnapComponent implements OnInit {
         .then(assocType => this.assocType = assocType);
   }
 
+  getRestOfData(): void {
+    this.monthendSnapService
+    .getOtherFormData()
+    .then(restOfForm => this.restOfForm = restOfForm);
+  }
+
   onSubmit(form: any): void {
     form['onDate'] = form['onDate'].formatted;
     console.log('you submitted value:', form);
@@ -48,6 +55,7 @@ export class MonthendSnapComponent implements OnInit {
 
   ngOnInit() {
     this.getAssocType();
+    this.getRestOfData();
   }
 
 }
