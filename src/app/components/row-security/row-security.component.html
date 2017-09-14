@@ -1,8 +1,12 @@
 <div class="row">
     <div class="form-group col-md-6">
-        <app-user-search (onSelectUser)="onSelectUser($event)"></app-user-search>
+        <label for="eid-search-box" class="col-form-label">User</label>
+        <input type="text" class="form-control" id="row-user-search-box" placeholder="Start Typing EID" #eidSearchBox (keyup)="getRowUsers(eidSearchBox.value)">
+        <ul *ngIf="rowUser">
+            <li *ngFor="let users of rowUser">{{ users.ec_nm }} ({{ users.ec_id }})</li>
+        </ul>
         <div *ngIf="user">
-            <h6 class="">Selected User: {{ user.first_name }} {{ user.last_name }}</h6>
+            <h6 class="">Selected User: {{ user }}</h6>
         </div>
     </div>
     <div class="form-group col-md-6">
