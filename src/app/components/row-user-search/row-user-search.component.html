@@ -1,0 +1,7 @@
+<label for="eid-search-box" class="col-form-label">User</label>
+<input type="text" class="form-control" id="user-search-box" placeholder="Start Typing Name" #eidSearchBox (keyup)="search(eidSearchBox.value)">
+<div class="search_results">
+    <div *ngFor="let user of rowUsers | async" (click)="selectUser(user)" class="eid-search-result">
+        {{ user.ec_nm }} ({{ user.ec_id }})
+    </div>
+</div>

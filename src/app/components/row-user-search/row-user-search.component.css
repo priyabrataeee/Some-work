@@ -1,0 +1,4 @@
+.search_results {
+    max-height: 120px;
+    overflow-y: scroll;
+}
