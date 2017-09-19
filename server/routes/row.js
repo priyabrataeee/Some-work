@@ -42,12 +42,12 @@ function getByName(req, res, next) {
 }
 
 router.get('/:id', (req, res, next) => {
-    const one = {
-        name: 'fetch-rows',
+    const byId = {
+        name: 'fetch-row',
         text: 'SELECT * FROM row_security WHERE id = $1',
         values: [req.params.id]
     }
-    db.query(one, (err, data) => {
+    db.query(byId, (err, data) => {
         if (err) {
             return next(err)
         }

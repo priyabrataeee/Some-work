@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-import { RowUserSearchService } from '../../services/row-user-search.service';
 import { RowUser } from './rowUser';
 
 import { UserPermissionsComponent } from '../user-permissions/user-permissions.component';
@@ -11,12 +9,10 @@ import { Row } from '../row/row';
 @Component({
   selector: 'app-row-security',
   templateUrl: './row-security.component.html',
-  styleUrls: ['./row-security.component.css'],
-  providers: [RowUserSearchService]
+  styleUrls: ['./row-security.component.css']
 })
 export class RowSecurityComponent implements OnInit {
 
-  rowUser: RowUser[];
   user: RowUser;
   row: Row;
 
@@ -27,17 +23,8 @@ export class RowSecurityComponent implements OnInit {
   onSelectRow(row: Row) {
     this.row = row;
   }
-  constructor(
-    private rowUserSearchService: RowUserSearchService
-  ) { }
+  constructor() { }
 
-  getRowUsers(term: string) {
-    this.rowUserSearchService
-        .getRowUsers(term)
-        .then(rowUser => this.rowUser = rowUser);
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
