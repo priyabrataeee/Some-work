@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyDatePickerModule } from 'mydatepicker';
-import { Ng2OrderModule } from 'ng2-order-pipe';
+import { OrderModule } from 'ngx-order-pipe';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -82,7 +82,7 @@ import { RowUserPermissionsComponent } from './components/row-user-permissions/r
     AppRoutingModule,
     FormsModule,
     MyDatePickerModule,
-    Ng2OrderModule
+    OrderModule
   ],
   providers: [
     SSOAuthService,

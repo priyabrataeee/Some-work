@@ -8,6 +8,6 @@ export class OAuthConstants {
   public static OPEN_ID_URL = 'https://webaccessqa.kdc.capitalone.com/idp/userinfo.openid';
   public static CLIENT_ID = 'ThickClientOAuthwPingSSO4HRDASHBOARD';
   public static SECRET_KEY = 'ThickClientOAuthwPingSSO4HRDASHBOARD_NonProdSECRET';
-  public static REDIRECT_URL = 'http://localhost:3000/';
+  public static REDIRECT_URL = 'http://localhost:8800/';
   public static ALLOW_SSO = true;
 }

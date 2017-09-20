@@ -42,12 +42,12 @@ function getByName(req, res, next) {
 }
 
 router.get('/:id', (req, res, next) => {
-    const one = {
-        name: 'fetch-pages',
+    const getPageById = {
+        name: 'fetch-page',
         text: 'SELECT * FROM pages WHERE id = $1',
         values: [req.params.id]
     }
-    db.query(one, (err, data) => {
+    db.query(getPageById, (err, data) => {
         if (err) {
             return next(err)
         }

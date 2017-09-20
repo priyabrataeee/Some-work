@@ -56,8 +56,6 @@ export class EmployeeEventsComponent implements OnInit {
   ngOnInit() {
     this.getAssocType();
     this.getRestOfData();
-    console.log(this.restOfForm);
-    console.log(this.assocType);
   }
 
 }

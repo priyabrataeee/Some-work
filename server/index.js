@@ -39,6 +39,7 @@ app.use('/api/row', row)
 app.use('/api/monthend-snap', monthend_snap)
 app.use('/api/emp-event', emp_event)
 app.use('/api/rowUser', row_user)
+app.use('/api/page', page)
 app.use('/api', api)
 
 // Redirect other routes to Angular

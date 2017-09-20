@@ -16,7 +16,7 @@ function getDept(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.deptAll = data.rows;
         next();
@@ -29,7 +29,7 @@ function getReportTo1(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.reportTo1 = data.rows;
         next();
@@ -42,7 +42,7 @@ function getReportTo2(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.reportTo2 = data.rows;
         next();
@@ -55,7 +55,7 @@ function getReportTo3(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.reportTo3 = data.rows;
         next();
@@ -68,7 +68,7 @@ function getReportTo4(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.reportTo4 = data.rows;
         next();

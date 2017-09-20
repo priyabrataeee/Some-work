@@ -16,7 +16,7 @@ function getAssociateType(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.assoc = data.rows;
         next();
@@ -29,7 +29,7 @@ function getFlsaStatus(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.flsa = data.rows;
         next();
@@ -42,7 +42,7 @@ function getJobLevel(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.jobLvl = data.rows;
         next();
@@ -55,7 +55,7 @@ function getEmpStatus(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.empStatus = data.rows;
         next();
@@ -68,7 +68,7 @@ function getCountry(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.countryNM = data.rows;
         next();
@@ -81,7 +81,7 @@ function getState(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.stateNM = data.rows;
         next();
@@ -94,7 +94,7 @@ function getCity(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.cityNM = data.rows;
         next();
@@ -107,7 +107,7 @@ function getBuilding(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.buildingAll = data.rows;
         next();
@@ -120,7 +120,7 @@ function getOrgLvl1(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl1 = data.rows;
         next();
@@ -133,7 +133,7 @@ function getOrgLvl2(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl2 = data.rows;
         next();
@@ -146,7 +146,7 @@ function getOrgLvl3(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl3 = data.rows;
         next();
@@ -159,7 +159,7 @@ function getOrgLvl4(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl4 = data.rows;
         next();
@@ -172,7 +172,7 @@ function getOrgLvl5(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl5 = data.rows;
         next();
@@ -185,7 +185,7 @@ function getOrgLvl6(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl6 = data.rows;
         next();
@@ -198,7 +198,7 @@ function getOrgLvl7(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl7 = data.rows;
         next();
@@ -211,7 +211,7 @@ function getOrgLvl8(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl8 = data.rows;
         next();
@@ -224,7 +224,7 @@ function getOrgLvl9(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl9 = data.rows;
         next();
@@ -237,7 +237,7 @@ function getOrgLvl10(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl10 = data.rows;
         next();
@@ -250,7 +250,7 @@ function getOrgLvl11(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl11 = data.rows;
         next();
@@ -263,7 +263,7 @@ function getOrgLvl12(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.statuscode = 200;
+        // res.statuscode = 200;
         res.setHeader('Content-Type', 'application/json');
         compData.orgLvl12 = data.rows;
         next();
@@ -277,7 +277,7 @@ function getAllData(req, res) {
         flsa: compData.flsa,
         jobLvl: compData.jobLvl,
         empStatus: compData.empStatus,
-        countryNM: compData.countryNM.sort(),
+        countryNM: compData.countryNM,
         stateNM: compData.stateNM,
         cityNM: compData.cityNM,
         buildingAll: compData.buildingAll,
