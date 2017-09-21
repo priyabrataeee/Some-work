@@ -1,6 +1,6 @@
 import { Validators } from '@angular/forms';
 export let Mesnap  = {
-    'onDate': [null],
+    'onDate': [null, Validators.required],
     'associate_type': [null, Validators.required],
     'flsa': [null],
     'job_lvl': [null],

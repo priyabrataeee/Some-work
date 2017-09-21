@@ -18,6 +18,7 @@ const row = require('./routes/row')
 const monthend_snap = require('./routes/monthend-snap')
 const emp_event = require('./routes/emp-event')
 const row_user = require('./routes/rowUser')
+const monthend_snap_report = require('./routes/monthend-snap-report')
 
 const app = express();
 
@@ -40,6 +41,7 @@ app.use('/api/monthend-snap', monthend_snap)
 app.use('/api/emp-event', emp_event)
 app.use('/api/rowUser', row_user)
 app.use('/api/page', page)
+app.use('/api/monthend-snap-report', monthend_snap_report)
 app.use('/api', api)
 
 // Redirect other routes to Angular

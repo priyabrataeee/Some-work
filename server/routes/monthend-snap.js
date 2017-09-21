@@ -1,14 +1,8 @@
 const express = require('express')
-const path = require('path')
 const router = express.Router()
 const db = require('../db/redshift/index')
-const app = express()
 
 var compData = {};
-
-app.set('view engine', 'ejs');
-app.engine('.json', require('ejs').renderFile);
-app.set('views', path.join(__dirname, './src/app/components/monthend-snap'));
 
 function getAssociateType(req, res, next) {
     const assoc = 'select distinct assoc_type_desc from phrdw_tb.Emp_Eom_Fact'

@@ -44,6 +44,8 @@ import { EmployeeEventsComponent } from './components/employee-events/employee-e
 import { MonthendSnapService } from './services/monthend-snap.service';
 import { RowUserSearchComponent } from './components/row-user-search/row-user-search.component';
 import { RowUserPermissionsComponent } from './components/row-user-permissions/row-user-permissions.component';
+import { MonthendSnapReportComponent } from './components/monthend-snap-report/monthend-snap-report.component';
+import { MonthendSnapReportService } from './services/monthend-snap-report.service';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,8 @@ import { RowUserPermissionsComponent } from './components/row-user-permissions/r
     MonthendSnapComponent,
     EmployeeEventsComponent,
     RowUserSearchComponent,
-    RowUserPermissionsComponent
+    RowUserPermissionsComponent,
+    MonthendSnapReportComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +95,8 @@ import { RowUserPermissionsComponent } from './components/row-user-permissions/r
     CompanyService,
     PageService,
     RowService,
-    MonthendSnapService
+    MonthendSnapService,
+    MonthendSnapReportService
   ],
   bootstrap: [AppComponent]
 })

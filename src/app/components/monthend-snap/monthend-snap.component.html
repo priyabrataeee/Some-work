@@ -46,6 +46,7 @@
         <div class="col-md-3 form-group">
             <label>State</label>
             <select class="form-control" formControlName="state">
+            <option></option>
             <option *ngFor="let states of assocType.stateNM | orderBy: 'work_st_cd'">{{ states.work_st_cd }}</option>
             </select>
         </div>
